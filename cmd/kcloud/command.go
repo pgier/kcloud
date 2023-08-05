@@ -10,7 +10,7 @@ import (
 // RunCommandAndPrint runs the given command and prints the output
 func RunCommandAndPrint(command string, args ...string) error {
 	if cli.Verbose {
-		fmt.Println(QuoteCommand(command, args...))
+		fmt.Println(QuoteFooCommand(command, args...))
 	}
 	cmd := exec.Command(command, args...)
 	cmd.Stdout = os.Stdout
